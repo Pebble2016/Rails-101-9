@@ -23,8 +23,8 @@ class PostsController < ApplicationController
     end
   end
 
-  def sestroy
-    @posts = Post.find(params[:id])
+  def destroy
+    @post = Post.find(params[:id])
     @post.destroy
     redirect_to account_posts_path, alert: "Post delete!"
   end
